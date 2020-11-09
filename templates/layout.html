@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/static/styles.css" rel="stylesheet">
+        <title>Concise Dictionary of Hebrew Philosophical Terms</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light text-wrap">
+            <a class="navbar-brand text-wrap" style="color:#5F9EA0;" href="/hescheldictionary">Concise Dictionary of Hebrew Philosophical Terms</a>
+              <div class="navbar-nav">
+                <a class="nav-link {% block aboutcurrent %}{% endblock %}" href="/hescheldictionary/about">About</a>
+                <!--a class="nav-link {% block browsecurrent %}{% endblock %}" href="/browse">Browse</a>
+                <a class="nav-link {% block admincurrent %}{% endblock %}" href="/admin">Admin</a-->
+
+              </div>
+
+          </nav>
+
+          <h1>
+            {% block head %} {% endblock %}
+          </h1>
+
+          {% block body %} {% endblock %}
+
+
+
+    </body>
+</html>

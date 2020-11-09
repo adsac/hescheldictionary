@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+
+
+{% block body %}
+
+    <p class="maintext" style="text-align:center; margin-top: 10%">Enter Hebrew term:</p>
+
+  <form action="/hescheldictionary" method="post"  style="text-align: center;" class="maintext">
+
+       <div class="form-group">
+           <input autocomplete="off" name="hebword" type="text" list="words" style="direction:RTL; width:30%; align:center;" autofocus>
+           
+           <!--this creates a drop-down autocomplete based on the items in the dictionary-->
+           <datalist id="words" style="text-align:right; direction:RTL;"> 
+
+                {% for word in wordlist: %}
+                <option style="text-align: right; direction:RTL"> {{ word }}  </option>
+                {% endfor %}
+        
+            </datalist>
+       </div>
+
+       <button class="btn btn-secondary" type="submit">Submit</button>
+   </form>
+
+
+
+{% endblock %}
