@@ -96,7 +96,3 @@ def about():
     """about page"""
     return render_template("about.html")
 
-
-#@app.route("/admin")
-#def admin():
-#    return render_template("admin.html")
